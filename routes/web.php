@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BladeUIController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('blade');
 });
+
+Route::any('blade', [BladeUIController::class,'BladeUI'])->name('bladeui');
 
 
 Route::group(['prefix' => 'admin'], function () {
