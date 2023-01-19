@@ -11,7 +11,7 @@
  Target Server Version : 100412
  File Encoding         : 65001
 
- Date: 16/01/2023 16:06:42
+ Date: 18/01/2023 16:46:37
 */
 
 SET NAMES utf8mb4;
@@ -33,12 +33,30 @@ CREATE TABLE `bladeui`  (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 75 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 93 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of bladeui
 -- ----------------------------
 INSERT INTO `bladeui` VALUES (74, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-16 11:02:32', '2023-01-16 11:02:32');
+INSERT INTO `bladeui` VALUES (75, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-16 14:42:22', '2023-01-16 14:42:22');
+INSERT INTO `bladeui` VALUES (76, 'asdadasd@gmail.com', 'asdawd', 'adawdasd', 'Markdasdown textasdawdaawd', '#C30C0C', '2023-01-17 12:00:00', 'Wed Jan 18 2023', '2023-01-16 14:43:06', '2023-01-16 14:43:06');
+INSERT INTO `bladeui` VALUES (77, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-18 10:58:47', '2023-01-18 10:58:47');
+INSERT INTO `bladeui` VALUES (78, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-18 10:59:06', '2023-01-18 10:59:06');
+INSERT INTO `bladeui` VALUES (79, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-18 10:59:36', '2023-01-18 10:59:36');
+INSERT INTO `bladeui` VALUES (80, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-18 10:59:46', '2023-01-18 10:59:46');
+INSERT INTO `bladeui` VALUES (81, 'asdad@gmail.com', '1232132', 'awdadsd', 'Markdown textdawda******[![](https://)](https://)', '#F70000', '2023-01-17 12:00:00', 'Wed Jan 18 2023', '2023-01-18 11:00:38', '2023-01-18 11:00:38');
+INSERT INTO `bladeui` VALUES (82, 'asdad@gmail.com', '1232132', 'awdadsd', 'Markdown textdawda******[![](https://)](https://)', '#F70000', '2023-01-17 12:00:00', 'Wed Jan 18 2023', '2023-01-18 11:01:19', '2023-01-18 11:01:19');
+INSERT INTO `bladeui` VALUES (83, 'asdad@gmail.com', '1232132', 'awdadsd', 'Markdown textdawda******[![](https://)](https://)', '#F70000', '2023-01-17 12:00:00', 'Wed Jan 18 2023', '2023-01-18 11:02:01', '2023-01-18 11:02:01');
+INSERT INTO `bladeui` VALUES (84, 'asdad@gmail.com', '1232132', 'awdadsd', 'Markdown textdawda******[![](https://)](https://)', '#F70000', '2023-01-17 12:00:00', 'Wed Jan 18 2023', '2023-01-18 11:03:38', '2023-01-18 11:03:38');
+INSERT INTO `bladeui` VALUES (85, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-18 11:07:13', '2023-01-18 11:07:13');
+INSERT INTO `bladeui` VALUES (86, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-18 11:07:18', '2023-01-18 11:07:18');
+INSERT INTO `bladeui` VALUES (87, 'dsad@gmail.com', 'asda', 'adas', '1. > Markdown text***adsad***adw', NULL, '2023-01-17 12:00:00', 'Thu Jan 12 2023', '2023-01-18 11:25:28', '2023-01-18 11:25:28');
+INSERT INTO `bladeui` VALUES (88, 'dsad@gmail.com', 'asda', 'adas', 'Markdown text', NULL, '2023-01-17 12:00:00', 'Thu Jan 12 2023', '2023-01-18 11:25:41', '2023-01-18 11:25:41');
+INSERT INTO `bladeui` VALUES (89, 'dsad@gmail.com', 'asda', 'adas', 'Markdown text', NULL, '2023-01-17 12:00:00', 'Thu Jan 12 2023', '2023-01-18 11:25:54', '2023-01-18 11:25:54');
+INSERT INTO `bladeui` VALUES (90, 'dsad@gmail.com', 'asda', 'adas', 'Markdown text', '#F00000', '2023-01-17 12:00:00', 'Thu Jan 12 2023', '2023-01-18 11:26:00', '2023-01-18 11:26:00');
+INSERT INTO `bladeui` VALUES (91, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-01-18 11:27:08', '2023-01-18 11:27:08');
+INSERT INTO `bladeui` VALUES (92, 'awdas@gmail.com', 'awdasd', 'awdasd', '1. Markdown textasdawdad******adw\r\n2. awd\r\n3. adw\r\n4. wad\r\n5.', '#5E23D4', '2023-01-19 12:00:00', 'Thu Jan 12 2023', '2023-01-18 11:32:03', '2023-01-18 11:32:03');
 
 -- ----------------------------
 -- Table structure for categories

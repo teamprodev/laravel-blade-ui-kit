@@ -9,12 +9,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "blade-ui-kit/blade-ui-kit": "^0.3.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.0",
-        "tcg/voyager": "^1.5"
+        "tcg/voyager": "^1.5",
+        "teamprodev/laravel-components": "dev-master",
+        "yajra/laravel-datatables-oracle": "^10.2"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.0",

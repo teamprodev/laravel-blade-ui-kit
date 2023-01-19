@@ -8,6 +8,9 @@
 
     <title>Document</title>
     @bukStyles
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/searchbuilder/1.4.0/css/searchBuilder.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.2.0/css/dataTables.dateTime.min.css">
 </head>
 <body>
     <x-label for="Form" />
@@ -33,6 +36,27 @@
         <x-color-picker name="color" value="{{$bladeui->color}}"/>
         <br>
 
+        <table id="example" class="display wrap table-bordered " style="border-collapse: collapse; width: 100%; padding-top: 10px">
+            <thead class="border border-dark">
+            <tr class="border border-dark">
+                <th style="text-align: center;" class="border border-dark">email</th>
+                <th style="text-align: center;" class="border border-dark">password</th>
+                <th style="text-align: center;" class="border border-dark">about</th>
+                <th style="text-align: center;" class="border border-dark">markdown</th>
+            </thead>
+        </table>
+        @bukScripts
+
+        <script>
+            var columns = [
+                {data: "email", name: 'email'},
+                {data: 'password', name: 'password'},
+                {data: 'about', name: 'about'},
+                {data: 'markdown', name: 'markdown'},
+            ];
+        </script>
+        <x-laravelYajra dom="'Qlfrtip'" getData="{{ route('yajra.data') }}" tableTitle="{{ __('Data') }}"></x-laravelYajra>
+
         <x-label for="Flat-Pickr" />
         <x-flat-pickr name="date_1" value="{{$bladeui->date_1}}"/>
         <br>
@@ -54,7 +78,6 @@
         </x-form-button>
     </x-form>
 
-    @bukScripts
 </body>
 </html>
 <table>

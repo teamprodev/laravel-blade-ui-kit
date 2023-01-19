@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BladeUI;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;
+use Yajra\DataTables\DataTables;
 
 class BladeUIController extends Controller
 {
@@ -20,5 +21,10 @@ class BladeUIController extends Controller
         $bladeui->save();
 
         return view('bladeui', ['bladeui' => $bladeui]);
+    }
+    public function yajraGetData()
+    {
+        return Datatables::of(BladeUI::query())
+            ->make(true);
     }
 }

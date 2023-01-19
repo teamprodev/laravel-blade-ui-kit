@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::any('blade', [BladeUIController::class,'BladeUI'])->name('bladeui');
 
+Route::post('/yajra', [BladeUIController::class,'yajraGetData'])->name('yajra.data');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
