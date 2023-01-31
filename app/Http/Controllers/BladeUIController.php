@@ -27,4 +27,20 @@ class BladeUIController extends Controller
         return Datatables::of(BladeUI::query())
             ->make(true);
     }
+    public function uppy(Request $request,BladeUI $application)
+    {
+        $upload = json_decode($application->upload);
+        $upload_to = config('uppy.upload_file');
+
+        if ($request->hasFile('uppy')) {
+            $fileName = time() . '_' . $request->uppy->getClientOriginalName();
+            $filePath = $request->file('uppy')
+                ->move(public_path($upload_to), $fileName);
+
+            $upload[] = $fileName;
+        }
+
+        $application->upload = json_encode($upload);
+        $application->update();
+    }
 }

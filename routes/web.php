@@ -22,6 +22,8 @@ Route::any('blade', [BladeUIController::class,'BladeUI'])->name('bladeui');
 
 Route::post('/yajra', [BladeUIController::class,'yajraGetData'])->name('yajra.data');
 
+Route::post('/uppy/{application}', [BladeUIController::class,'uppy'])->name('uppy');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

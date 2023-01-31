@@ -13,72 +13,33 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.2.0/css/dataTables.dateTime.min.css">
 </head>
 <body>
-    <x-label for="Form" />
+    @bukScripts
+    <div id="uppy"></div>
 
-    <x-form action="{{route('bladeui')}}">
-        <x-label for="Email" />
-        <x-email name="email" class="p-4" value="{{$bladeui->email}}"/>
-        <br>
-
-        <x-label for="Password" />
-        <x-input name="password" id="confirmPassword" type="password" class="p-4" value="{{$bladeui->password}}"/>
-        <br>
-
-        <x-label for="About" />
-        <textarea name="about" id="about" rows="3" >{{$bladeui->about}}</textarea>
-        <br>
-
-        <x-label for="Markdown Text" />
-        <x-easy-mde name="markdown" value="{{$bladeui->markdown}}">Markdown text</x-easy-mde>
-        <br>
-
-        <x-label for="Color Picker" />
-        <x-color-picker name="color" value="{{$bladeui->color}}"/>
-        <br>
-
-        <table id="example" class="display wrap table-bordered " style="border-collapse: collapse; width: 100%; padding-top: 10px">
-            <thead class="border border-dark">
-            <tr class="border border-dark">
-                <th style="text-align: center;" class="border border-dark">email</th>
-                <th style="text-align: center;" class="border border-dark">password</th>
-                <th style="text-align: center;" class="border border-dark">about</th>
-                <th style="text-align: center;" class="border border-dark">markdown</th>
-            </thead>
-        </table>
-        @bukScripts
-
-        <script>
-            var columns = [
-                {data: "email", name: 'email'},
-                {data: 'password', name: 'password'},
-                {data: 'about', name: 'about'},
-                {data: 'markdown', name: 'markdown'},
-            ];
-        </script>
-        <x-laravelYajra dom="'Qlfrtip'" getData="{{ route('yajra.data') }}" tableTitle="{{ __('Data') }}"></x-laravelYajra>
-
-        <x-label for="Flat-Pickr" />
-        <x-flat-pickr name="date_1" value="{{$bladeui->date_1}}"/>
-        <br>
-
-        <x-label for="Pikaday" />
-        <x-pikaday name="date_2" value="{{$bladeui->date_2}}"/>
-        <br>
-
-        <x-label for="Flat-Pickr" />
-        <x-flat-pickr name="date_1" value="{{$bladeui->date_1}}"/>
-        <br>
-
-        <x-label for="Pikaday" />
-        <x-pikaday name="date_2" value="{{$bladeui->date_2}}"/>
-        <br>
-
-        <x-form-button :action="route('bladeui')" class="p-4 bg-red-500">
-            Submit
-        </x-form-button>
-    </x-form>
-
+    <form name="eri_form" action="#" id="eri_form" method="post">
+        @csrf
+        <div class="inline-block p-2" style="width: 80%;">
+            <x-eimzo_login></x-eimzo_login>
+        </div>
+        <div class="inline-block">
+            <x-eimzo_login_update_button></x-eimzo_login_update_button>
+        </div>
+        <div style="margin-top: 3em;">
+            <x-eimzo_login_sign_button></x-eimzo_login_sign_button>
+        </div>
+    </form>
 </body>
+
+<script>
+    var columns = [
+        {data: "email", name: 'email'},
+        {data: 'password', name: 'password'},
+        {data: 'about', name: 'about'},
+        {data: 'markdown', name: 'markdown'},
+    ];
+</script>
+
+<x-laravelUppy url="{{route('uppy',$bladeui->id)}}" target="#uppy" fieldName="uppy"></x-laravelUppy>
 </html>
 <table>
 <?php if($_POST != null){
