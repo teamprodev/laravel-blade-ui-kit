@@ -13,7 +13,18 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.2.0/css/dataTables.dateTime.min.css">
 </head>
 <body>
-    @bukScripts
+@bukScripts
+
+<table id="example" class="display wrap table-bordered " style="border-collapse: collapse; width: 100%; padding-top: 10px">
+    <thead class="border border-dark">
+    <tr class="border border-dark">
+        <th style="text-align: center;" class="border border-dark">email</th>
+        <th style="text-align: center;" class="border border-dark">password</th>
+        <th style="text-align: center;" class="border border-dark">about</th>
+        <th style="text-align: center;" class="border border-dark">markdown</th>
+    </thead>
+</table>
+<x-laravelYajra dom="'Qlfrtip'" getData="{{ route('yajra.data') }}" tableTitle="{{ __('Data') }}"></x-laravelYajra>
     <div id="uppy"></div>
 
     <form name="eri_form" action="#" id="eri_form" method="post">
